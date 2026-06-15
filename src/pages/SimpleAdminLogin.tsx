@@ -9,8 +9,8 @@ import { Alert, AlertDescription } from "../components/ui/alert";
 import { Shield, Eye, EyeOff, Home, AlertCircle } from "lucide-react";
 
 export function SimpleAdminLogin() {
-  const [email, setEmail] = useState("admin@cartify.com");
-  const [password, setPassword] = useState("CartifyAdmin2024!");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -79,7 +79,7 @@ export function SimpleAdminLogin() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@cartify.com"
+                placeholder="Enter email address"
                 required
                 disabled={isLoading}
               />
